@@ -118,7 +118,6 @@ a quick summary with their defaults:
         cache_dir:          %kernel.cache_dir%/translations
         managed_locales:    []
         file_formats:       ['yml', 'xliff']
-        
 
 -  ``enabled`` : Enabled or disable the KunstmaanTranslatorBundle
 -  ``default_bundle`` : Default bundle used for the import from within

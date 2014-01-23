@@ -1,4 +1,4 @@
-Developer Guide
+End user guide
 ===============
 
 .. toctree::
@@ -6,4 +6,4 @@ Developer Guide
 
     contributing
 
-.. include:: /developer/map.rst.inc
+.. include:: /chapter-end-user/map.rst.inc

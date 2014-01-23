@@ -11,9 +11,9 @@ An end user guide that walks through all default features.
 .. toctree::
    :hidden:
 
-   enduser/index
+   chapter-enduser/index
 
-.. include:: /enduser/map.rst.inc
+.. include:: /chapter-end-user/map.rst.inc
 
 Developer guide
 --------------
@@ -23,9 +23,9 @@ A guide to get a Bundles CMS up and running and building your website.
 .. toctree::
    :hidden:
 
-   developer/index
+   chapter-developer/index
 
-.. include:: /developer/map.rst.inc
+.. include:: /chapter-developer/map.rst.inc
 
 General
 --------
@@ -35,6 +35,6 @@ Everyhting related to contributing, licensing, etc
 .. toctree::
    :hidden:
 
-   general/index
+   chapter-general/index
 
-.. include:: /general/map.rst.inc
+.. include:: /chapter-general/map.rst.inc

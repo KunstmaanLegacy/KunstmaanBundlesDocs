@@ -7,7 +7,7 @@ done
 rm -Rf __compiled/index.rst
 
 
-for d in $(find . -not -name '.*' -not -name "__*" -type d -maxdepth 1)
+for d in $(find . -name 'chapter-*' -type d )
 do
     echo "Creating $d"
     mkdir "__compiled/$d"

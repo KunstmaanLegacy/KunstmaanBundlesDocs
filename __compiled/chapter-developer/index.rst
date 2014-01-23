@@ -10,5 +10,6 @@ Developer Guide
     page
     articles-section
     search
+    advanced/index
 
-.. include:: /developer/map.rst.inc
+.. include:: /chapter-developer/map.rst.inc

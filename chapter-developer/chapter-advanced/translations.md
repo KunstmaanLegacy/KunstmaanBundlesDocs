@@ -91,12 +91,12 @@ The ```kunstmaan_translator``` namespace has a few configuration options, a quic
 
 ```
 kunstmaan_translator:
-	enabled: 			true
-	default_bundle: 	kunstmaantranslatorbundle
-	cache_dir: 			%kernel.cache_dir%/translations
-	managed_locales:	[]
-	file_formats:		['yml', 'xliff']
-	
+    enabled:            true
+    default_bundle:     kunstmaantranslatorbundle
+    cache_dir:          %kernel.cache_dir%/translations
+    managed_locales:    []
+    file_formats:       ['yml', 'xliff']
+
 ```
 
 * ```enabled``` : Enabled or disable the KunstmaanTranslatorBundle

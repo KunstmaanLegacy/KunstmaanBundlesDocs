@@ -17,8 +17,8 @@ with
 
 ::
 
-    mv app/config/routing.yml app/config/routing.multilang.yml 
-    mv app/config/routing.singlelang.yml app/config/routing.yml 
+    mv app/config/routing.yml app/config/routing.multilang.yml
+    mv app/config/routing.singlelang.yml app/config/routing.yml
 
 *WARNING: If you generated bundles before going single language, check
 that you have all routing moved over to the new routing file!*
@@ -33,8 +33,8 @@ with
 
 ::
 
-    mv app/config/security.yml app/config/security.multilang.yml 
-    mv app/config/security.singlelang.yml app/config/security.yml 
+    mv app/config/security.yml app/config/security.multilang.yml
+    mv app/config/security.singlelang.yml app/config/security.yml
 
 3) Change your AppKernel
 ------------------------
