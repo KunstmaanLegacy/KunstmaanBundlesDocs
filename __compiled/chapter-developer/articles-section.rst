@@ -43,22 +43,22 @@ on the homepage, we first have to enable this, so go ahead and open
 ``src/Sandbox/WebsiteBundle/Entity/Pages/HomePage.php`` and add the
 NewsOverviewPage to ``getPossibleChildTypes`` :
 
-.. code:: php
+::
 
-        /**
-         * @return array
-         */
-        public function getPossibleChildTypes()
-        {
-            return array(
-                ...
-                ),
-                array(
-                    'name' => 'News Overview Page',
-                    'class'=> 'Sandbox\WebsiteBundle\Entity\News\NewsOverviewPage'
-                )
-            );
-        }
+    /**
+     * @return array
+     */
+    public function getPossibleChildTypes()
+    {
+        return array(
+            ...
+            ),
+            array(
+                'name' => 'News Overview Page',
+                'class'=> 'Sandbox\WebsiteBundle\Entity\News\NewsOverviewPage'
+            )
+        );
+    }
 
 After adding this snippet, you should be able to add a news overview
 page on the homepage in the backend, so go ahead and do that - and make

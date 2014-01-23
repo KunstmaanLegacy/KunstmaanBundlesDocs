@@ -40,7 +40,7 @@ To test if it actually is running you can run :
 
 Which should return something like this :
 
-```json
+```
 {
   "ok" : true,
   "status" : 200,
@@ -77,7 +77,7 @@ As before, we would like to be able to add the search page as a subpage of the h
 `getPossibleChildTypes` in the HomePage class, so open `src/Sandbox/WebsiteBundle/Entity/Pages/HomePage.php`, and add
 it :
 
-```php
+```
     /**
      * @return array
      */

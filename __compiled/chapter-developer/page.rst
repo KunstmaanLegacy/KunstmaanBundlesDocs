@@ -66,7 +66,7 @@ source code, so open
 
 First note the following :
 
-.. code:: php
+::
 
         public function getPossibleChildTypes()
         {
@@ -88,7 +88,7 @@ which is the PHP class name (with full namespace) for that page type.
 Since we don't really need any subpages for our Employees page, we can
 just return an empty array, so replace it with :
 
-.. code:: php
+::
 
         public function getPossibleChildTypes()
         {
@@ -100,7 +100,7 @@ you should see the "Add subpage" button disappear.
 
 The next function that needs or attention is ``getDefaultView`` :
 
-.. code:: php
+::
 
         /**
          * Get the twig view.
@@ -116,7 +116,7 @@ As it clearly states, this function returns the name of the Twig view
 that will be used to render the page. Since we want a custom view, we'll
 change it into something that suits our needs :
 
-.. code:: php
+::
 
         /**
          * Get the twig view.
@@ -141,7 +141,7 @@ Next open up
 
 By default the contents of this file should match the following :
 
-.. code:: php
+::
 
     {% extends 'SandboxWebsiteBundle:Page:layout.html.twig' %}
     {% block content %}
@@ -158,7 +158,7 @@ It would be nice for the user to be able to add some custom page parts
 employees, so we'll just make sure to pass the list of employees as a
 variable to the template and render it below the page parts.
 
-.. code:: php
+::
 
     {% extends 'SandboxWebsiteBundle:Page:layout.html.twig' %}
     {% block content %}
@@ -184,7 +184,7 @@ page type class.
 
 So add the following in ``EmployeesPage.php`` :
 
-.. code:: php
+::
 
     ...
     use Kunstmaan\NodeBundle\Helper\RenderContext;

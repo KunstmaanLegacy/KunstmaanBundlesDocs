@@ -92,7 +92,7 @@ Head on over to
 and have a look at the ``view.html.twig`` file located there. This file
 should contain the following :
 
-.. code:: html
+::
 
     <div class="service-pp">
         <p>{{ resource.title }}</p>
@@ -105,7 +105,7 @@ image should be displayed as a 150x150 pixels thumbnail and the
 description should keep new lines entered in the text area (but still be
 plain text). So let's modify the template accordingly :
 
-.. code:: html
+::
 
     <div class="service-pp">
         <h2>{{ resource.title }}</h2>
@@ -120,7 +120,7 @@ configuration settings to define it, so open ``app/config/config.yml``
 and look for the liip\_imagine section inside. By default it will look
 like this :
 
-.. code:: yml
+::
 
     liip_imagine:
         cache_prefix: uploads/cache
@@ -148,7 +148,7 @@ like this :
 So let's add an entry named ``service_pp_thumbnail`` to the
 ``filter_sets`` in ``app/config/config.yml`` :
 
-.. code:: yml
+::
 
     ...
     liip_imagine:
@@ -190,7 +190,7 @@ The default template (located in
 ``vendor/kunstmaan/pagepart-bundle/Kunstmaan/PagePartBundle/Resources/views/TocPagePart/view.html.twig``)
 looks like this :
 
-.. code:: html
+::
 
     {% set tocContent = '' %}
     {% if page is defined %}
@@ -221,7 +221,7 @@ root folder of your web application :
 Now create a new ``view.html.twig`` file that contains the code you wish
 to use to render the page part :
 
-.. code:: html
+::
 
     {% set tocContent = '' %}
     {% if page is defined %}

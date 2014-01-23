@@ -32,7 +32,6 @@ Since we would like to be able to add a News page in the main navigation on the 
 so go ahead and open `src/Sandbox/WebsiteBundle/Entity/Pages/HomePage.php` and add the NewsOverviewPage to
 `getPossibleChildTypes` :
 
-```php
     /**
      * @return array
      */
@@ -47,7 +46,6 @@ so go ahead and open `src/Sandbox/WebsiteBundle/Entity/Pages/HomePage.php` and a
             )
         );
     }
-```
 
 After adding this snippet, you should be able to add a news overview page on the homepage in the backend, so go ahead
 and do that - and make sure you publish it after it is created.

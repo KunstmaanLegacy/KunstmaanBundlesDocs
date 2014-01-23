@@ -52,7 +52,7 @@ To customize the rendering of the page you'll have to dig into the source code, 
 
 First note the following :
 
-```php
+```
     public function getPossibleChildTypes()
     {
         return array(
@@ -71,7 +71,7 @@ PHP class name (with full namespace) for that page type.
 
 Since we don't really need any subpages for our Employees page, we can just return an empty array, so replace it with :
 
-```php
+```
     public function getPossibleChildTypes()
     {
         return array();
@@ -82,7 +82,7 @@ If you do that and reload the Employees page you created in the backend, you sho
 
 The next function that needs or attention is `getDefaultView` :
 
-```php
+```
     /**
      * Get the twig view.
      *
@@ -97,7 +97,7 @@ The next function that needs or attention is `getDefaultView` :
 As it clearly states, this function returns the name of the Twig view that will be used to render the page. Since
 we want a custom view, we'll change it into something that suits our needs :
 
-```php
+```
     /**
      * Get the twig view.
      *
@@ -120,7 +120,7 @@ Next open up `src/Sandbox/WebsiteBundle/Resources/views/Pages/EmployeesPage/view
 
 By default the contents of this file should match the following :
 
-```php
+```
 {% extends 'SandboxWebsiteBundle:Page:layout.html.twig' %}
 {% block content %}
     {{ render_pagetemplate(page) }}
@@ -134,7 +134,7 @@ It would be nice for the user to be able to add some custom page parts (some hea
 display the list of employees, so we'll just make sure to pass the list of employees as a variable to the template and
 render it below the page parts.
 
-```php
+```
 {% extends 'SandboxWebsiteBundle:Page:layout.html.twig' %}
 {% block content %}
     {{ render_pagetemplate(page) }}
@@ -159,7 +159,7 @@ you can override in the page type class.
 
 So add the following in `EmployeesPage.php` :
 
-```php
+```
 ...
 use Kunstmaan\NodeBundle\Helper\RenderContext;
 use Symfony\Component\DependencyInjection\ContainerInterface;

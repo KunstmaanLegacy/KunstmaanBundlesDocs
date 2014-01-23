@@ -49,7 +49,7 @@ To test if it actually is running you can run :
 
 Which should return something like this :
 
-.. code:: json
+::
 
     {
       "ok" : true,
@@ -94,7 +94,7 @@ of the homepage, so we need to add it to the ``getPossibleChildTypes``
 in the HomePage class, so open
 ``src/Sandbox/WebsiteBundle/Entity/Pages/HomePage.php``, and add it :
 
-.. code:: php
+::
 
         /**
          * @return array

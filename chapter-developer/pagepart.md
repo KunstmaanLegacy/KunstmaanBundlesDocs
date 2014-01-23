@@ -73,7 +73,7 @@ and where to change it.
 Head on over to `src/Sandbox/WebsiteBundle/Resources/views/PageParts/ServicePagePart` and have a look at the
 `view.html.twig` file located there. This file should contain the following :
 
-```html
+```
 <div class="service-pp">
     <p>{{ resource.title }}</p>
     {% if resource.image is not empty %}<img src="{{ asset(resource.image.url) }}" {% if resource.imageAltText is not empty %}alt="{{ resource.imageAltText }}"{% endif %} />{% endif %}
@@ -85,7 +85,7 @@ We would like to have the service title as a second level heading, the image sho
 thumbnail and the description should keep new lines entered in the text area (but still be plain text). So let's modify
 the template accordingly :
 
-```html
+```
 <div class="service-pp">
     <h2>{{ resource.title }}</h2>
     {% if resource.image is not empty %}<img src="{{ asset(resource.image.url | imagine_filter('service_pp_thumbnail')) }}" {% if resource.imageAltText is not empty %}alt="{{ resource.imageAltText }}"{% endif %} align="left" class="img-thumbnail" />{% endif %}
@@ -97,7 +97,7 @@ Since we're using an [Imagine][1] filter to create a thumbnail of the image we s
 configuration settings to define it, so open `app/config/config.yml` and look for the liip_imagine section inside. By
 default it will look like this :
 
-```yml
+```
 liip_imagine:
     cache_prefix: uploads/cache
     driver: imagick
@@ -124,7 +124,7 @@ liip_imagine:
 
 So let's add an entry named `service_pp_thumbnail` to the `filter_sets` in `app/config/config.yml` :
 
-```yml
+```
 ...
 liip_imagine:
     ...
@@ -159,7 +159,7 @@ all second level headings (HeaderPageParts where niv equals 2) on a page.
 The default template (located in `vendor/kunstmaan/pagepart-bundle/Kunstmaan/PagePartBundle/Resources/views/TocPagePart/view.html.twig`)
 looks like this :
 
-```html
+```
 {% set tocContent = '' %}
 {% if page is defined %}
     {% for pagepart in getpageparts(page, "main") %}
@@ -185,7 +185,7 @@ First create the folder that will contain the template override, in the root fol
 
 Now create a new `view.html.twig` file that contains the code you wish to use to render the page part :
 
-```html
+```
 {% set tocContent = '' %}
 {% if page is defined %}
     {% for pagepart in getpageparts(page, "main") %}
