@@ -1,6 +1,6 @@
-* :doc:`/developer/installation`
-* :doc:`/developer/pagepart`
-* :doc:`/developer/adminlist`
-* :doc:`/developer/page`
-* :doc:`/developer/articles-section`
-* :doc:`/developer/search`
+* :doc:`/chapter-developer/installation`
+* :doc:`/chapter-developer/pagepart`
+* :doc:`/chapter-developer/adminlist`
+* :doc:`/chapter-developer/page`
+* :doc:`/chapter-developer/articles-section`
+* :doc:`/chapter-developer/search`

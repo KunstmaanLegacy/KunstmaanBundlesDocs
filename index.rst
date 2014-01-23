@@ -1,12 +1,7 @@
-Kunstmaan Bundles CMS
-=====================
+A dash of documentation
+-----------------------
 
-`The Kunstmaan Bundles CMS for Symfony2 <http://bundles.kunstmaan.be>`_ is modern content management system for PHP, based on `the Symfony2 framework <http://symfony.com>`_.
-
-End-user guide
---------------
-
-An end user guide that walks through all default features.
+While very user friendly for the maintainers of the CMS content, we feel that a manual describing the basic functionality of the administration interface is a great way to get people up to speed very quickly. If you are a maintainer, please check out the end user section of this documentation.
 
 .. toctree::
    :hidden:
@@ -15,10 +10,7 @@ An end user guide that walks through all default features.
 
 .. include:: /chapter-end-user/map.rst.inc
 
-Developer guide
---------------
-
-A guide to get a Bundles CMS up and running and building your website.
+As a developer wanting to get your own website up and running using the Bundles CMS a bit of documentation is very welcome. [The developer section](http://bundles.kunstmaan.be/docs/developer-guide) will answer most of the common questions and will help you get up and running as quickly as possible.
 
 .. toctree::
    :hidden:
@@ -27,10 +19,16 @@ A guide to get a Bundles CMS up and running and building your website.
 
 .. include:: /chapter-developer/map.rst.inc
 
-General
---------
+For more advanced topics refer to the [Advanced chapter](http://bundles.kunstmaan.be/docs/developer-guide).
 
-Everyhting related to contributing, licensing, etc
+.. toctree::
+   :hidden:
+
+   chapter-advanced/index
+
+.. include:: /chapter-advanced/map.rst.inc
+
+If you want to contribute, or learn more about the licensing of the CMS, refer to the General chapter.
 
 .. toctree::
    :hidden:

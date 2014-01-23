@@ -33,3 +33,5 @@ do
     pandoc -s -f markdown -t rst $f -o "__compiled/$dirn/$output.rst"
 done
 
+pandoc -s -f markdown -t rst README.md -o "__compiled/index.rst"
+cat index.rst >> __compiled/index.rst
