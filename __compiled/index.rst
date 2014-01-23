@@ -1,3 +1,6 @@
+Kunstmaan Bundles CMS for Symfony2
+==================================
+
 A bit of background
 -------------------
 
@@ -43,9 +46,9 @@ opensource our CMS, and in this way both benefitting and giving back to
 the community. The goal was to lower total cost of ownership for us, as
 well as our customers.
 
-In the end, producing this content management system. If you want to
-take a peek at what we did wit it, `check out some project showcases at
-the website <http://bundles.kunstmaan.be/showcase>`__.
+In the end producing this content management system. If you want to take
+a peek at what we did wit it, `check out some project showcases at the
+website <http://bundles.kunstmaan.be/showcase>`__.
 
 A dash of documentation
 -----------------------

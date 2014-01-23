@@ -44,42 +44,46 @@ like to add a picture of the employee. We'll add this field manually, so
 open up ``src/Sandbox/WebsiteBundle/Entity/Employee.php`` and add the
 following :
 
-.. code:: php
+::
 
     ...
-        /**
-         * @var \Kunstmaan\MediaBundle\Entity\Media
-         *
-         * @ORM\ManyToOne(targetEntity="Kunstmaan\MediaBundle\Entity\Media")
-         * @ORM\JoinColumns({
-         *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
-         * })
-         */
-        private $picture;
+
+    /**
+     * @var \Kunstmaan\MediaBundle\Entity\Media
+     *
+     * @ORM\ManyToOne(targetEntity="Kunstmaan\MediaBundle\Entity\Media")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     * })
+     */
+    private $picture;
 
     ...
-        /**
-         * Set picture
-         *
-         * @param \Kunstmaan\MediaBundle\Entity\Media $picture
-         * @return Employee
-         */
-        public function setPicture(\Kunstmaan\MediaBundle\Entity\Media $picture = null)
-        {
-          $this->picture = $picture;
 
-          return $this;
-        }
+    /**
+     * Set picture
+     *
+     * @param \Kunstmaan\MediaBundle\Entity\Media $picture
+     * @return Employee
+     */
+    public function setPicture(\Kunstmaan\MediaBundle\Entity\Media $picture = null)
+    {
+      $this->picture = $picture;
 
-        /**
-         * Get picture
-         *
-         * @return \Kunstmaan\MediaBundle\Entity\Media
-         */
-        public function getPicture()
-        {
-          return $this->picture;
-        }
+      return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Kunstmaan\MediaBundle\Entity\Media
+     */
+    public function getPicture()
+    {
+      return $this->picture;
+    }
+
+    ...
 
 Since we've added an extra field to our entity, we'll also have to
 update the entry form (AdminType) that is attached to our Employee
@@ -87,20 +91,20 @@ entity, so open up
 ``src/Sandbox/WebsiteBundle/Form/EmployeeAdminType.php`` and add the
 picture field there as well :
 
-.. code:: php
+::
 
-        public function buildForm(FormBuilderInterface $builder, array $options)
-        {
-            ...
-            $builder->add(
-                'picture',
-                'media',
-                array(
-                    'pattern'  => 'KunstmaanMediaBundle_chooser',
-                    'required' => false,
-                )
-            );
-        }
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        ...
+        $builder->add(
+            'picture',
+            'media',
+            array(
+                'pattern'  => 'KunstmaanMediaBundle_chooser',
+                'required' => false,
+            )
+        );
+    }
 
 Now everything should be good to go, so we'll create a new migration for
 the required database changes, and apply it immediately :
@@ -120,44 +124,47 @@ the default NotBlank annotation to make sure validation errors are
 triggered when people don't fill out the form correctly, so open
 ``src/Sandbox/WebsiteBundle/Entity/Employee.php`` and add the following:
 
-.. code:: php
+::
 
     ...
+
     use Symfony\Component\Validator\Constraints as Assert;
+
     ...
-        /**
-         * @var string
-         *
-         * @ORM\Column(name="first_name", type="string", length=25)
-         * @Assert\NotBlank()
-         */
-        private $firstName;
 
-        /**
-         * @var string
-         *
-         * @ORM\Column(name="last_name", type="string", length=50)
-         * @Assert\NotBlank()
-         */
-        private $lastName;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="first_name", type="string", length=25)
+     * @Assert\NotBlank()
+     */
+    private $firstName;
 
-        /**
-         * @var string
-         *
-         * @ORM\Column(name="twitter_handle", type="string", length=20)
-         * @Assert\NotBlank()
-         */
-        private $twitterHandle;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="last_name", type="string", length=50)
+     * @Assert\NotBlank()
+     */
+    private $lastName;
 
-        /**
-         * @var \Kunstmaan\MediaBundle\Entity\Media
-         *
-         * @ORM\ManyToOne(targetEntity="Kunstmaan\MediaBundle\Entity\Media")
-         * @ORM\JoinColumns({
-         *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
-         * })
-         */
-        private $picture;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="twitter_handle", type="string", length=20)
+     * @Assert\NotBlank()
+     */
+    private $twitterHandle;
+
+    /**
+     * @var \Kunstmaan\MediaBundle\Entity\Media
+     *
+     * @ORM\ManyToOne(targetEntity="Kunstmaan\MediaBundle\Entity\Media")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="picture_id", referencedColumnName="id")
+     * })
+     */
+    private $picture;
 
 4) Using a custom column template
 ---------------------------------
@@ -168,18 +175,18 @@ names (instead of the field name) as well. So open
 ``src/Sandbox/WebsiteBundle/AdminList/EmployeeAdminListConfigurator.php``
 and make the following changes :
 
-.. code:: php
+::
 
-        /**
-         * Configure the visible columns
-         */
-        public function buildFields()
-        {
-            $this->addField('firstName', 'First name', true);
-            $this->addField('lastName', 'Last name', true);
-            $this->addField('twitterHandle', 'Twitter handle', true);
-            $this->addField('picture', 'Picture', false);
-        }
+    /**
+     * Configure the visible columns
+     */
+    public function buildFields()
+    {
+        $this->addField('firstName', 'First name', true);
+        $this->addField('lastName', 'Last name', true);
+        $this->addField('twitterHandle', 'Twitter handle', true);
+        $this->addField('picture', 'Picture', false);
+    }
 
 As the picture field has a toString method that just returns the id of
 the relevant record in the media table this will display a number
@@ -194,18 +201,18 @@ column templates in ``AdminList/entity-name/column-name.twig.html``) :
 
 Then create a new file called picture.html.twig in this folder:
 
-.. code:: php
+::
 
     {% if object is not null and object.url is not empty %}
-    <img class="thumbnail" src="{{ object.url | imagine_filter('employee_thumbnail') }}" />
+        <img class="thumbnail" src="{{ object.url | imagine_filter('employee_thumbnail') }}" />
     {% else %}
-    No picture!
+        No picture!
     {% endif %}
 
 Add an extra entry for the ``employee_thumbnail`` filter to the
 ``filter_sets`` in ``app/config/config.yml`` :
 
-.. code:: yml
+::
 
     ...
     liip_imagine:
@@ -221,18 +228,18 @@ And finally specify this template in the ``buildFields`` method in
 ``src/Sandbox/WebsiteBundle/AdminList/EmployeeAdminListConfigurator.php``
 :
 
-.. code:: php
+::
 
-        /**
-         * Configure the visible columns
-         */
-        public function buildFields()
-        {
-            $this->addField('firstName', 'First name', true);
-            $this->addField('lastName', 'Last name', true);
-            $this->addField('twitterHandle', 'Twitter handle', true);
-            $this->addField('picture', 'Picture', false, 'SandboxWebsiteBundle:AdminList\Employee:picture.html.twig');
-        }
+    /**
+     * Configure the visible columns
+     */
+    public function buildFields()
+    {
+        $this->addField('firstName', 'First name', true);
+        $this->addField('lastName', 'Last name', true);
+        $this->addField('twitterHandle', 'Twitter handle', true);
+        $this->addField('picture', 'Picture', false, 'SandboxWebsiteBundle:AdminList\Employee:picture.html.twig');
+    }
 
 5) Creating an admin list for entities you already created
 ----------------------------------------------------------
@@ -275,7 +282,7 @@ own naming scheme of course) :
 Create a new menu adaptor class file (``ModulesMenuAdaptor.php``) in
 this folder with the following code :
 
-.. code:: php
+::
 
     <?php
     namespace Sandbox\WebsiteBundle\Helper\Menu;
@@ -316,12 +323,12 @@ And finally register this service in
 ``src/Sandbox/WebsiteBundle/Resources/config/services.yml`` by adding
 the following snippet:
 
-.. code:: yml
+::
 
-        sandboxwebsitebundle.menu.adaptor.modules:
-            class: Sandbox\WebsiteBundle\Helper\Menu\ModulesMenuAdaptor
-            tags:
-                -  { name: 'kunstmaan_admin.menu.adaptor' }
+    sandboxwebsitebundle.menu.adaptor.modules:
+        class: Sandbox\WebsiteBundle\Helper\Menu\ModulesMenuAdaptor
+        tags:
+            -  { name: 'kunstmaan_admin.menu.adaptor' }
 
 If you reload the page in the backend, you should now see a new
 "Employee" menu item in the Modules menu.

@@ -1,3 +1,5 @@
+# Kunstmaan Bundles CMS for Symfony2
+
 ## A bit of background
 
 [Kunstmaan](http://www.kunstmaan.be) is a Leuven (Belgium) based communication agency. Since 1998 we have been helping brands make their mark with integrated communication. We combine state-of-the art production with strategic insight, creative imagination and powerful design. In doing so our technical teams focus on delivering high-tech solutions to bring these brands to the internet, and as such, building both campaign- and corporate websites as a core business.
@@ -22,4 +24,4 @@ We started by developing out an extensive core feature set:
 
 We also developed the entire system while keeping in mind that we wanted to use as much community bundles as possible, and that we wanted to opensource our CMS, and in this way both benefitting and giving back to the community. The goal was to lower total cost of ownership for us, as well as our customers.
 
-In the end, producing this content management system. If you want to take a peek at what we did wit it, [check out some project showcases at the website](http://bundles.kunstmaan.be/showcase).
+In the end producing this content management system. If you want to take a peek at what we did wit it, [check out some project showcases at the website](http://bundles.kunstmaan.be/showcase).
