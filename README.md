@@ -1,16 +1,18 @@
-Getting Started
-===============
+Kunstmaan Bundles CMS for Symfony2 Documentation
+================================================
 
-To guide you through setting up a website using the Kunstmaan Bundles CMS, we've created a series of documentation pages that guide you through this process. At the end of this guide you will have a fully functional website with content pages and custom content bocks, an introduction to lists of objects in the backend, a news section and an integrated search engine.
+[The Kunstmaan Bundles CMS for Symfony2][] is modern content management
+system for PHP, based on [the Symfony2 framework][].
 
-Table of contents
------------------
-1. [Installation](http://bundles.kunstmaan.be/getting-started/installation)
-2. [Create a pagepart](http://bundles.kunstmaan.be/getting-started/creating-a-pagepart)
-3. [Create an admin list](http://bundles.kunstmaan.be/getting-started/creating-an-adminlist)
-4. [Create a page](http://bundles.kunstmaan.be/getting-started/creating-a-page)
-5. [Adding articles](http://bundles.kunstmaan.be/getting-started/adding-news-articles)
-6. [Adding search](http://bundles.kunstmaan.be/getting-started/adding-search)
-7. [Advanced](http://bundles.kunstmaan.be/getting-started/advanced)
+* [End-user guide][]: an end user guide that walks through all default features.
+* [Developer guide][]: a guide to get a Bundles CMS up and running and building your website.
+* [General][]: Everyhting related to contributing, licensing, etc
 
-[![Analytics](https://ga-beacon.appspot.com/UA-3160735-7/Kunstmaan/KunstmaanBundlesDocs)](https://github.com/igrigorik/ga-beacon)
+
+
+
+  [The Kunstmaan Bundles CMS for Symfony2]: http://bundles.kunstmaan.be
+  [the Symfony2 framework]: http://symfony.com
+  [End-user guide]: http://bundles.kunstmaan.be/docs/user-guide
+  [Developer guide]: http://bundles.kunstmaan.be/docs/developer-guide
+  [General]: http://bundles.kunstmaan.be/docs/general
