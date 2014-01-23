@@ -2,5 +2,5 @@
 * :doc:`/developer/pagepart`
 * :doc:`/developer/adminlist`
 * :doc:`/developer/page`
-* :doc:`/developer/news-section`
+* :doc:`/developer/articles-section`
 * :doc:`/developer/search`
