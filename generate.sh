@@ -12,6 +12,18 @@ do
     mkdir "__compiled/$d"
 done
 
+for f in $(find . -name "*.rst.inc" -type f)
+do
+    echo "Copy $f"
+    cp $f __compiled/$f
+done
+
+for f in $(find . -name "*.rst" -type f)
+do
+    echo "Copy $f"
+    cp $f __compiled/$f
+done
+
 for f in $(find . -name "*.md" -not -name "README.md" -type f)
 do
     echo "Converting $f"
@@ -20,8 +32,3 @@ do
     pandoc -s -f markdown -t rst $f -o "__compiled/$dirn/$output.rst"
 done
 
-for f in $(find . -name "*.rst.inc" -type f)
-do
-    echo "Copy $f"
-    cp $f __compiled/$f
-done
