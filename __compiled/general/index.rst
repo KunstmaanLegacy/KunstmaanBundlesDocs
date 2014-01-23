@@ -4,11 +4,6 @@ Developer Guide
 .. toctree::
     :hidden:
 
-    installation
-    pagepart
-    adminlist
-    page
-    articles-section
-    search
+    contributing
 
 .. include:: /developer/map.rst.inc
