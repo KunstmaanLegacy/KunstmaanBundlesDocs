@@ -1,3 +1,4 @@
+
 A dash of documentation
 -----------------------
 
@@ -10,7 +11,7 @@ While very user friendly for the maintainers of the CMS content, we feel that a 
 
 .. include:: /chapter-end-user/map.rst.inc
 
-As a developer wanting to get your own website up and running using the Bundles CMS a bit of documentation is very welcome. [The developer section](http://bundles.kunstmaan.be/docs/developer-guide) will answer most of the common questions and will help you get up and running as quickly as possible.
+As a developer wanting to get your own website up and running using the Bundles CMS a bit of documentation is very welcome. The developer section will answer most of the common questions and will help you get up and running as quickly as possible.
 
 .. toctree::
    :hidden:
@@ -19,7 +20,7 @@ As a developer wanting to get your own website up and running using the Bundles 
 
 .. include:: /chapter-developer/map.rst.inc
 
-For more advanced topics refer to the [Advanced chapter](http://bundles.kunstmaan.be/docs/developer-guide).
+For more advanced topics refer to the Advanced chapter.
 
 .. toctree::
    :hidden:

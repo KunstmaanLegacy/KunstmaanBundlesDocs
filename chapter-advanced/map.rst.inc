@@ -1,2 +1,2 @@
-* :doc:`/chapter-developer/chapter-advanced/single-language`
-* :doc:`/chapter-developer/chapter-advanced/translations`
+* :doc:`/chapter-advanced/single-language`
+* :doc:`/chapter-advanced/translations`
