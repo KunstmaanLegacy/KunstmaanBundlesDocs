@@ -1,8 +1,11 @@
 Kunstmaan Bundles CMS for Symfony2
 ==================================
 
+Introduction
+------------
+
 A bit of background
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 `Kunstmaan <http://www.kunstmaan.be>`__ is a Leuven (Belgium) based
 communication agency. Since 1998 we have been helping brands make their
@@ -13,7 +16,7 @@ solutions to bring these brands to the internet, and as such, building
 both campaign- and corporate websites as a core business.
 
 A spice of history
-------------------
+~~~~~~~~~~~~~~~~~~
 
 In the end of 2011 we were looking for a new way to build professional,
 fast, good looking websites. We did a lot of research on the programming
@@ -51,7 +54,7 @@ a peek at what we did wit it, `check out some project showcases at the
 website <http://bundles.kunstmaan.be/showcase>`__.
 
 A dash of documentation
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 While very user friendly for the maintainers of the CMS content, we feel that a manual describing the basic functionality of the administration interface is a great way to get people up to speed very quickly. If you are a maintainer, please check out the end user section of this documentation.
 

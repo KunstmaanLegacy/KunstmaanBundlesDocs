@@ -1,6 +1,6 @@
 
 A dash of documentation
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 While very user friendly for the maintainers of the CMS content, we feel that a manual describing the basic functionality of the administration interface is a great way to get people up to speed very quickly. If you are a maintainer, please check out the end user section of this documentation.
 
